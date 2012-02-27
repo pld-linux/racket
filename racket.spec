@@ -1,6 +1,5 @@
 #
 # TODO:
-# - obsoletes for plt-* packages
 # - fix summaries/descriptions
 #
 Summary:	PLT Scheme programming environment
@@ -32,6 +31,7 @@ BuildRequires:	xorg-lib-libXmu-devel
 BuildRequires:	xorg-lib-libXrender-devel
 BuildRequires:	xorg-lib-libXt-devel
 BuildRequires:	zlib-devel
+Obsoletes:	plt
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -46,6 +46,7 @@ programowania Scheme.
 Summary:	PLT Scheme implementation
 Summary(pl.UTF-8):	Implementacja języka PLT Scheme
 Group:		Development/Languages
+Obsoletes:	plt-mzscheme
 
 %description mzscheme
 MzScheme is the PLT Scheme implementation. It implements the language
@@ -62,6 +63,7 @@ Summary:	PLT graphical Scheme implementation
 Summary(pl.UTF-8):	Graficzna implementacja języka PLT Scheme
 Group:		Development/Languages
 Requires:	%{name}-mzscheme = %{version}-%{release}
+Obsoletes:	plt-mred
 
 %description mred
 MrEd is the PLT's graphical Scheme implementation. It embeds and
@@ -77,6 +79,7 @@ Summary:	PLT Scheme graphical development environment
 Summary(pl.UTF-8):	Graficzne środowisko programistyczne PLT Scheme
 Group:		Development/Languages
 Requires:	%{name}-mred = %{version}-%{release}
+Obsoletes:	plt-drscheme
 
 %description drracket
 DrScheme is the graphical development environment for creating
@@ -91,6 +94,7 @@ Summary:	Sample games from PLT Scheme
 Summary(pl.UTF-8):	Przykładowe gry z projektu PLT Scheme
 Group:		Applications/Games
 Requires:	%{name}-mred = %{version}-%{release}
+Obsoletes:	plt-games
 
 %description games
 This package contains sample games from PLT Scheme project.
@@ -102,6 +106,7 @@ Pakiet zawiera przykładowe gry z projektu PLT Scheme.
 Summary:	Documentation for PLT Scheme
 Summary(pl.UTF-8):	Dokumentacja dla PLT Scheme
 Group:		Documentation
+Obsoletes:	plt-docs
 
 %description docs
 Documentation for PLT Scheme.
@@ -114,6 +119,7 @@ Summary:	Slideshow from PLT Scheme
 Summary(pl.UTF-8):	Pokaz slajdów z PLT Scheme
 Group:		Applications/Graphics
 Requires:	%{name}-mred = %{version}-%{release}
+Obsoletes:	plt-slideshow
 
 %description slideshow
 Slideshow from PLT Scheme.
@@ -125,6 +131,7 @@ Pokaz slajdów z PLT Scheme.
 Summary:	Webserver from PLT Scheme
 Summary(pl.UTF-8):	Serwer WWW z PLT Scheme
 Group:		Applications/WWW
+Obsoletes:	plt-webserver
 
 %description webserver
 Webserver from PLT Scheme.
@@ -137,6 +144,7 @@ Summary:	Development header files for PLT
 Summary(pl.UTF-8):	Pliki nagłówkowe dla PLT
 Group:		Development/Languages
 Requires:	%{name}-mzscheme = %{version}-%{release}
+Obsoletes:	plt-devel
 
 %description devel
 This package contains the symlinks, headers and object files needed to
